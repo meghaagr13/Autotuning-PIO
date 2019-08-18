@@ -1,0 +1,114 @@
+Copyright (C) 2009-2014 Intel Corporation. All rights reserved.
+Intel(R) Inspector XE 2015 (build 379161)
+Copyright (C) 2009-2014 Intel Corporation. All rights reserved.
+Intel(R) VTune(TM) Amplifier XE 2015 (build 393444)
+Copyright (C) 2009-2014 Intel Corporation. All rights reserved.
+Intel(R) Advisor XE 2015 (build 380555)
+Copyright (C) 2009-2014 Intel Corporation. All rights reserved.
+Intel(R) Inspector XE 2015 (build 379161)
+Copyright (C) 2009-2014 Intel Corporation. All rights reserved.
+Intel(R) VTune(TM) Amplifier XE 2015 (build 393444)
+Copyright (C) 2009-2014 Intel Corporation. All rights reserved.
+Intel(R) Advisor XE 2015 (build 380555)
+/var/spool/PBS/aux/131798.mgmt03
+IOR-3.2.0: MPI Coordinated Test of Parallel I/O
+Began               : Sun May 19 01:15:37 2019
+Command line        : ./bin/ior -a mpiio -w -r -o output/out -t 409600 -b 104857600 -C -H -e -O lustreStripeSize=5963776,lustreStripeCount=19 -U mpihints
+Machine             : Linux cn344
+TestID              : 0
+StartTime           : Sun May 19 01:15:37 2019
+Path                : /home/dsinghvi/project/progress/ior-3.2.0/output
+FS                  : 57.4 TiB   Used FS: 31.9%   Inodes: 230.7 Mi   Used Inodes: 2.7%
+
+Options: 
+api                 : mpiio
+apiVersion          : (3.0)
+test filename       : output/out
+access              : single-shared-file
+type                : independent
+segments            : 1
+ordering in a file  : sequential
+ordering inter file : constant task offset
+task offset         : 1
+tasks               : 8
+clients per node    : 8
+repetitions         : 1
+xfersize            : 409600 bytes
+blocksize           : 100 MiB
+aggregate filesize  : 800 MiB
+Lustre stripe size  : 5.69 MiB
+stripe count        : Use default
+
+Results: 
+
+access    bw(MiB/s)  block(KiB) xfer(KiB)  open(s)    wr/rd(s)   close(s)   total(s)   iter
+------    ---------  ---------- ---------  --------   --------   --------   --------   ----
+
+hints passed to MPI_File_open() {
+	romio_ds_read = enable
+	romio_ds_write = enable
+	romio_cb_read = enable
+	romio_cb_write = disable
+	cb_buffer_size = 534773760
+}
+
+hints returned from opened file {
+	cb_buffer_size = 534773760
+	romio_cb_read = enable
+	romio_cb_write = disable
+	cb_nodes = 1
+	romio_no_indep_rw = false
+	romio_cb_pfr = disable
+	romio_cb_fr_types = aar
+	romio_cb_fr_alignment = 1
+	romio_cb_ds_threshold = 0
+	romio_cb_alltoall = automatic
+	ind_rd_buffer_size = 4194304
+	ind_wr_buffer_size = 524288
+	romio_ds_read = enable
+	romio_ds_write = enable
+	cb_config_list = *:1
+	romio_filesystem_type = NFS:
+	romio_aggregator_list = 0 
+}
+write     620.30     102400     400.00     0.006833   1.28       0.091823   1.29       0   
+
+hints passed to MPI_File_open() {
+	romio_ds_read = enable
+	romio_ds_write = enable
+	romio_cb_read = enable
+	romio_cb_write = disable
+	cb_buffer_size = 534773760
+}
+
+hints returned from opened file {
+	cb_buffer_size = 534773760
+	romio_cb_read = enable
+	romio_cb_write = disable
+	cb_nodes = 1
+	romio_no_indep_rw = false
+	romio_cb_pfr = disable
+	romio_cb_fr_types = aar
+	romio_cb_fr_alignment = 1
+	romio_cb_ds_threshold = 0
+	romio_cb_alltoall = automatic
+	ind_rd_buffer_size = 4194304
+	ind_wr_buffer_size = 524288
+	romio_ds_read = enable
+	romio_ds_write = enable
+	cb_config_list = *:1
+	romio_filesystem_type = NFS:
+	romio_aggregator_list = 0 
+}
+read      6840       102400     400.00     0.004333   0.112323   0.024409   0.116956   0   
+remove    -          -          -          -          -          -          0.000649   0   
+Max Write: 620.30 MiB/sec (650.43 MB/sec)
+Max Read:  6840.18 MiB/sec (7172.45 MB/sec)
+
+Summary of all tests:
+Operation   Max(MiB)   Min(MiB)  Mean(MiB)     StdDev   Max(OPs)   Min(OPs)  Mean(OPs)     StdDev    Mean(s) Test# #Tasks tPN reps fPP reord reordoff reordrand seed segcnt   blksiz    xsize aggs(MiB)   API RefNum
+write         620.30     620.30     620.30       0.00    1587.97    1587.97    1587.97       0.00    1.28970     0      8   8    1   0     1        1         0    0      1 104857600   409600     800.0 mpiio      0
+read         6840.18    6840.18    6840.18       0.00   17510.86   17510.86   17510.86       0.00    0.11696     0      8   8    1   0     1        1         0    0      1 104857600   409600     800.0 mpiio      0
+Finished            : Sun May 19 01:15:39 2019
+131798.mgmt03
+IOR_1

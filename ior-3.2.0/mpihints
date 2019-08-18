@@ -1,0 +1,5 @@
+IOR_HINT__MPI__romio_ds_read disable
+IOR_HINT__MPI__romio_ds_write enable
+IOR_HINT__MPI__romio_cb_read enable
+IOR_HINT__MPI__romio_cb_write disable
+IOR_HINT__MPI__cb_buffer_size 417333248

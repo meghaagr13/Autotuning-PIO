@@ -1,0 +1,19 @@
+Copyright (C) 2009-2014 Intel Corporation. All rights reserved.
+Intel(R) Inspector XE 2015 (build 379161)
+Copyright (C) 2009-2014 Intel Corporation. All rights reserved.
+Intel(R) VTune(TM) Amplifier XE 2015 (build 393444)
+Copyright (C) 2009-2014 Intel Corporation. All rights reserved.
+Intel(R) Advisor XE 2015 (build 380555)
+Copyright (C) 2009-2014 Intel Corporation. All rights reserved.
+Intel(R) Inspector XE 2015 (build 379161)
+Copyright (C) 2009-2014 Intel Corporation. All rights reserved.
+Intel(R) VTune(TM) Amplifier XE 2015 (build 393444)
+Copyright (C) 2009-2014 Intel Corporation. All rights reserved.
+Intel(R) Advisor XE 2015 (build 380555)
+/var/spool/PBS/aux/109854.mgmt03
+[mpiexec@cn022] HYDU_sock_write (../../utils/sock/sock.c:417): write error (Bad file descriptor)
+[mpiexec@cn022] HYD_pmcd_pmiserv_send_signal (../../pm/pmiserv/pmiserv_cb.c:244): unable to write data to proxy
+[mpiexec@cn022] ui_cmd_cb (../../pm/pmiserv/pmiserv_pmci.c:175): unable to send signal downstream
+[mpiexec@cn022] HYDT_dmxu_poll_wait_for_event (../../tools/demux/demux_poll.c:76): callback returned error status
+[mpiexec@cn022] HYD_pmci_wait_for_completion (../../pm/pmiserv/pmiserv_pmci.c:501): error waiting for event
+[mpiexec@cn022] main (../../ui/mpich/mpiexec.c:1059): process manager error waiting for completion
